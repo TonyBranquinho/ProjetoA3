@@ -1,0 +1,72 @@
+[
+  {
+    "nome": "Projeto Alpha",
+    "descricao": "Desenvolvimento do sistema interno de RH.",
+    "dataInicio": "2025-01-10",
+    "dataTerminoPrevista": "2025-06-30",
+    "status": "em andamento"
+  },
+  {
+    "nome": "Projeto Beta",
+    "descricao": "Implementação do novo site institucional.",
+    "dataInicio": "2025-02-15",
+    "dataTerminoPrevista": "2025-05-20",
+    "status": "concluído"
+  },
+  {
+    "nome": "Projeto Gama",
+    "descricao": "Atualização da infraestrutura de TI.",
+    "dataInicio": "2025-03-01",
+    "dataTerminoPrevista": "2025-12-31",
+    "status": "planejado"
+  },
+  {
+    "nome": "Projeto Delta",
+    "descricao": "Pesquisa e desenvolvimento de novos produtos.",
+    "dataInicio": "2024-11-20",
+    "dataTerminoPrevista": "2025-07-15",
+    "status": "em andamento"
+  },
+  {
+    "nome": "Projeto Épsilon",
+    "descricao": "Migração para cloud computing.",
+    "dataInicio": "2025-04-01",
+    "dataTerminoPrevista": "2025-11-30",
+    "status": "planejado"
+  },
+  {
+    "nome": "Projeto Zeta",
+    "descricao": "Lançamento de aplicativo mobile.",
+    "dataInicio": "2025-01-05",
+    "dataTerminoPrevista": "2025-03-30",
+    "status": "concluído"
+  },
+  {
+    "nome": "Projeto Eta",
+    "descricao": "Automação do processo de vendas.",
+    "dataInicio": "2025-05-10",
+    "dataTerminoPrevista": "2025-09-30",
+    "status": "em andamento"
+  },
+  {
+    "nome": "Projeto Teta",
+    "descricao": "Reestruturação do departamento financeiro.",
+    "dataInicio": "2025-02-01",
+    "dataTerminoPrevista": "2025-08-31",
+    "status": "cancelado"
+  },
+  {
+    "nome": "Projeto Iota",
+    "descricao": "Capacitação e treinamento de equipe.",
+    "dataInicio": "2025-06-01",
+    "dataTerminoPrevista": "2025-12-01",
+    "status": "planejado"
+  },
+  {
+    "nome": "Projeto Kappa",
+    "descricao": "Melhoria da segurança dos dados.",
+    "dataInicio": "2025-03-15",
+    "dataTerminoPrevista": "2025-07-30",
+    "status": "em andamento"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "nomeEquipe": "Equipe Alpha",
+    "descricao": "Equipe responsável pelo desenvolvimento interno.",
+    "membros": ["joaosilva", "mariaoliveira", "carlosp"],
+    "projetos": ["Projeto Alpha", "Projeto Beta"]
+  },
+  {
+    "nomeEquipe": "Equipe Beta",
+    "descricao": "Equipe focada em infraestrutura e TI.",
+    "membros": ["anasouza", "pedrohenrique", "fernandacosta"],
+    "projetos": ["Projeto Gama", "Projeto Épsilon"]
+  },
+  {
+    "nomeEquipe": "Equipe Gama",
+    "descricao": "Equipe de lançamentos de produtos.",
+    "membros": ["lucasmartins", "rafaelgomes", "julianafernandes"],
+    "projetos": ["Projeto Zeta", "Projeto Eta"]
+  },
+  {
+    "nomeEquipe": "Equipe Delta",
+    "descricao": "Equipe de segurança e compliance.",
+    "membros": ["joaosilva", "beatrizlima", "rafaelgomes"],
+    "projetos": ["Projeto Kappa"]
+  },
+  {
+    "nomeEquipe": "Equipe Épsilon",
+    "descricao": "Equipe de automação e vendas.",
+    "membros": ["carlosp", "fernandacosta", "mariaoliveira"],
+    "projetos": ["Projeto Eta", "Projeto Delta"]
+  },
+  {
+    "nomeEquipe": "Equipe Zeta",
+    "descricao": "Equipe de treinamento e capacitação.",
+    "membros": ["julianafernandes", "pedrohenrique", "beatrizlima"],
+    "projetos": ["Projeto Iota"]
+  },
+  {
+    "nomeEquipe": "Equipe Eta",
+    "descricao": "Equipe de reestruturação financeira.",
+    "membros": ["lucasmartins", "anasouza", "joaosilva"],
+    "projetos": ["Projeto Teta", "Projeto Beta"]
+  },
+  {
+    "nomeEquipe": "Equipe Teta",
+    "descricao": "Equipe de pesquisa e desenvolvimento.",
+    "membros": ["rafaelgomes", "mariaoliveira"],
+    "projetos": ["Projeto Delta"]
+  },
+  {
+    "nomeEquipe": "Equipe Iota",
+    "descricao": "Equipe de implementação cloud.",
+    "membros": ["fernandacosta", "pedrohenrique", "lucasmartins"],
+    "projetos": ["Projeto Épsilon"]
+  },
+  {
+    "nomeEquipe": "Equipe Kappa",
+    "descricao": "Equipe de suporte técnico.",
+    "membros": ["joaosilva", "carlosp", "anasouza"],
+    "projetos": ["Projeto Alpha", "Projeto Kappa"]
+  }
+]

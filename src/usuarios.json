@@ -1,0 +1,92 @@
+[
+  {
+    "nomeCompleto": "João Silva",
+    "cpf": "123.456.789-00",
+    "email": "joao.silva@email.com",
+    "cargo": "administrador",
+    "login": "joaosilva",
+    "senha": "senha123",
+    "perfil": "administrador"
+  },
+  {
+    "nomeCompleto": "Maria Oliveira",
+    "cpf": "234.567.890-11",
+    "email": "maria.oliveira@email.com",
+    "cargo": "gerente",
+    "login": "mariaoliveira",
+    "senha": "senha456",
+    "perfil": "gerente"
+  },
+  {
+    "nomeCompleto": "Carlos Pereira",
+    "cpf": "345.678.901-22",
+    "email": "carlos.pereira@email.com",
+    "cargo": "colaborador",
+    "login": "carlosp",
+    "senha": "senha789",
+    "perfil": "colaborador"
+  },
+  {
+    "nomeCompleto": "Ana Souza",
+    "cpf": "456.789.012-33",
+    "email": "ana.souza@email.com",
+    "cargo": "gerente",
+    "login": "anasouza",
+    "senha": "senha321",
+    "perfil": "gerente"
+  },
+  {
+    "nomeCompleto": "Pedro Henrique",
+    "cpf": "567.890.123-44",
+    "email": "pedro.henrique@email.com",
+    "cargo": "colaborador",
+    "login": "pedrohenrique",
+    "senha": "senha654",
+    "perfil": "colaborador"
+  },
+  {
+    "nomeCompleto": "Fernanda Costa",
+    "cpf": "678.901.234-55",
+    "email": "fernanda.costa@email.com",
+    "cargo": "administrador",
+    "login": "fernandacosta",
+    "senha": "senha987",
+    "perfil": "administrador"
+  },
+  {
+    "nomeCompleto": "Lucas Martins",
+    "cpf": "789.012.345-66",
+    "email": "lucas.martins@email.com",
+    "cargo": "colaborador",
+    "login": "lucasmartins",
+    "senha": "senha147",
+    "perfil": "colaborador"
+  },
+  {
+    "nomeCompleto": "Beatriz Lima",
+    "cpf": "890.123.456-77",
+    "email": "beatriz.lima@email.com",
+    "cargo": "gerente",
+    "login": "beatrizlima",
+    "senha": "senha258",
+    "perfil": "gerente"
+  },
+  {
+    "nomeCompleto": "Rafael Gomes",
+    "cpf": "901.234.567-88",
+    "email": "rafael.gomes@email.com",
+    "cargo": "colaborador",
+    "login": "rafaelgomes",
+    "senha": "senha369",
+    "perfil": "colaborador"
+  },
+  {
+    "nomeCompleto": "Juliana Fernandes",
+    "cpf": "012.345.678-99",
+    "email": "juliana.fernandes@email.com",
+    "cargo": "administrador",
+    "login": "julianafernandes",
+    "senha": "senha741",
+    "perfil": "administrador"
+  }
+] 
