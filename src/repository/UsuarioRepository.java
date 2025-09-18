@@ -12,7 +12,7 @@ import java.util.Optional;
 
 import modelos.Usuario;
 
-public class RepositoryUsuario {
+public class UsuarioRepository {
 	
 	private List<Usuario> usuarios; // Lista em memória
 	

@@ -3,7 +3,7 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import enums.Projeto;
+import modelos.Projeto;
 
 public class ProjetoController {
 	private List<Projeto> listaProjetos = new ArrayList<>();
