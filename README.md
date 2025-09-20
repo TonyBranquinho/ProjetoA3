@@ -4,18 +4,26 @@ Sistema simples para gerenciar usuários, equipes e projetos desenvolvido em Jav
 
 ## 🚀 Funcionalidades
 
+- **Interface Gráfica (Swing)**: Sistema com interface visual amigável
 - **Gestão de Usuários**: Criar, listar, atualizar e remover usuários
 - **Gestão de Equipes**: Criar, listar, atualizar e deletar equipes  
 - **Gestão de Projetos**: Adicionar, listar, atualizar e remover projetos
 - **Persistência de Dados**: Salvamento automático em arquivos (JSON e binário)
+- **Interface Console**: Versão alternativa para linha de comando
 
 ## 🏗️ Estrutura do Projeto
 
 ```
 ProjetoA3/
 ├── src/
+│   ├── view/                    ← Interface Gráfica (Swing)
+│   │   ├── MainWindow.java
+│   │   ├── UsuarioWindow.java
+│   │   ├── EquipeWindow.java
+│   │   └── ProjetoWindow.java
 │   ├── main/
-│   │   └── Main.java
+│   │   ├── Main.java           ← Versão Console
+│   │   └── MainSwing.java      ← Versão GUI
 │   ├── modelos/
 │   │   ├── Usuario.java
 │   │   ├── Equipe.java
@@ -34,6 +42,7 @@ ProjetoA3/
 ## 🛠️ Tecnologias Utilizadas
 
 - **Java** - Linguagem principal
+- **Java Swing** - Interface gráfica (GUI)
 - **Gson** - Serialização JSON (para equipes e projetos)
 - **Serialização Java** - Persistência binária (para usuários)
 
@@ -66,23 +75,52 @@ ProjetoA3/
 
 ### Executando o projeto
 
+#### 🎨 **Versão com Interface Gráfica (Recomendada)**
+
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/TonyBranquinho/ProjetoA3
+git clone https://github.com/seu-usuario/ProjetoA3.git
 cd ProjetoA3
 ```
 
 2. **Compile o projeto**
 ```bash
+javac -cp ".:gson-2.8.9.jar" src/main/MainSwing.java src/view/*.java src/modelos/*.java src/controller/*.java src/repository/*.java
+```
+
+3. **Execute a aplicação GUI**
+```bash
+java -cp ".:gson-2.8.9.jar:src" main.MainSwing
+```
+
+#### 📟 **Versão Console (Alternativa)**
+
+1. **Compile a versão console**
+```bash
 javac -cp ".:gson-2.8.9.jar" src/main/Main.java src/modelos/*.java src/controller/*.java src/repository/*.java
 ```
 
-3. **Execute a aplicação**
+2. **Execute a versão console**
 ```bash
 java -cp ".:gson-2.8.9.jar:src" main.Main
 ```
 
-### Exemplo de Saída
+### 🎨 Interface Gráfica (Swing)
+
+O sistema possui uma **interface visual moderna** com:
+
+- **Menu Principal**: Navegação entre módulos
+- **Formulários**: Cadastro e edição com validação
+- **Tabelas**: Listagem organizada dos dados
+- **Botões**: Operações CRUD intuitivas
+- **Confirmações**: Diálogos para ações críticas
+
+#### Telas Disponíveis:
+- **Usuários**: Formulário completo com 7 campos
+- **Equipes**: Cadastro simples com nome e descrição
+- **Projetos**: Gestão completa com datas e status
+
+### Exemplo de Saída (Console)
 ```
 === TESTE DO SISTEMA ===
 
@@ -152,6 +190,15 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-Desenvolvido como projeto acadêmico para demonstrar conceitos de programação orientada a objetos e persistência de dados em Java.
+Projeto acadêmico desenvolvido para demonstrar:
+- **Programação Orientada a Objetos** em Java
+- **Padrão MVC** com camada de persistência
+- **Interface Gráfica** com Java Swing
+- **Persistência de dados** em arquivos
+- **Operações CRUD** completas
+
+**Diferencial**: Sistema com interface visual profissional usando Java Swing.
 
 ---
+
+⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!

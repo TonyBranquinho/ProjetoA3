@@ -2,13 +2,15 @@ package repository;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import modelos.Usuario;
 
@@ -16,10 +18,12 @@ public class UsuarioRepository {
 	
 	private List<Usuario> usuarios; // Lista em memória
 	
-	private final String arquivo = "usuarios.dat"; // Nome do arquivo para persistência
+	private final String arquivo = "usuarios.json"; // Nome do arquivo para persistência
+	
+	private Gson gson = new Gson();
 	
 	// Construtor da classe
-	public void UsuarioRepository() {
+	public UsuarioRepository() {
 		this.usuarios = carregarUsuarios(); // Ao iniciar, carrega do arquivo se existir
 	}
 	
@@ -41,8 +45,16 @@ public class UsuarioRepository {
 	// Busca todos os usuarios
 	public List<Usuario> listarTodoUsuarios() {
 		
-		// Retorna uma copia da lista para evitar modificaçoes externas
-		return new ArrayList<>(usuarios);
+		File f = new File(arquivo);
+	    if (!f.exists()) {
+	        return new ArrayList<>();
+	    }
+	    try (FileReader reader = new FileReader(f)) {
+	        return gson.fromJson(reader, new TypeToken<List<Usuario>>(){}.getType());
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        return new ArrayList<>();
+	    }
 	}
 	
 	// Atualizar um usuário existente
@@ -75,12 +87,9 @@ public class UsuarioRepository {
 
     // Método auxiliar para salvar a lista de usuários no arquivo
     private void salvarEmArquivo() {
-        // Usa try-with-resources para garantir fechamento do arquivo
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(arquivo))) {
-            // Escreve o objeto (lista de usuários) no arquivo
-            oos.writeObject(usuarios);
+        try (FileWriter writer = new FileWriter(arquivo)) {
+            gson.toJson(usuarios, writer); // transforma lista em JSON
         } catch (IOException e) {
-            // Em caso de erro, imprime a stacktrace
             e.printStackTrace();
         }
     }
