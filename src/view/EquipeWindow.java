@@ -212,19 +212,52 @@ public class EquipeWindow extends JFrame {
         tabelaEquipes.clearSelection();
     }
     
+ // Substitua o método carregarEquipes() na sua EquipeWindow por este:
+
     private void carregarEquipes() {
+        System.out.println("=== CARREGANDO EQUIPES NA INTERFACE ===");
+        
+        // Limpar tabela
         modeloTabela.setRowCount(0);
+        System.out.println("Tabela limpa. Linhas na tabela: " + modeloTabela.getRowCount());
         
-        // Carrega equipes do arquivo JSON via Repository
-        repository.EquipeRepository repo = new repository.EquipeRepository();
-        java.util.List<modelos.Equipe> equipes = repo.carregarEquipes();
+        // Buscar equipes do controller
+        java.util.List<modelos.Equipe> equipes = equipeController.listarEquipes();
+        System.out.println("Equipes retornadas do controller: " + (equipes != null ? equipes.size() : "NULL"));
         
-        for (modelos.Equipe equipe : equipes) {
-            modeloTabela.addRow(new Object[]{
-                equipe.getNomeEquipe(), 
-                equipe.getDescricao()
-            });
+        if (equipes == null) {
+            System.out.println("ERRO: Lista de equipes é NULL!");
+            JOptionPane.showMessageDialog(this, "Erro: Lista de equipes não pôde ser carregada!");
+            return;
         }
+        
+        if (equipes.isEmpty()) {
+            System.out.println("AVISO: Lista de equipes está vazia!");
+            JOptionPane.showMessageDialog(this, "Nenhuma equipe encontrada na base de dados!\nUse o botão 'Criar Equipe' para adicionar equipes.");
+            return;
+        }
+        
+        // Adicionar equipes à tabela
+        for (int i = 0; i < equipes.size(); i++) {
+            modelos.Equipe equipe = equipes.get(i);
+            System.out.println("Adicionando equipe[" + i + "]: " + equipe.getNomeEquipe());
+            
+            Object[] row = new Object[]{
+                equipe.getNomeEquipe(),
+                equipe.getDescricao()
+            };
+            
+            modeloTabela.addRow(row);
+            System.out.println("Linha adicionada. Total de linhas na tabela: " + modeloTabela.getRowCount());
+        }
+        
+        System.out.println("Carregamento concluído. Linhas finais na tabela: " + modeloTabela.getRowCount());
+        
+        // Forçar atualização da tabela
+        tabelaEquipes.revalidate();
+        tabelaEquipes.repaint();
+        
+        System.out.println("========================================");
     }
     
     private void voltarMenu() {
